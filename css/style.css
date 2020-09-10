@@ -168,8 +168,8 @@ p {
   margin: 15px 5px;
 }
 .main-footer .container {
-  min-height: 5px;
-  padding: 5px 40px;
+  min-height: 100px;
+  padding: 20px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

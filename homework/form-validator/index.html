@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单校验</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>注册</h1>
+      <form id="form">
+        <div class="form-group">
+          <label for="name">名字</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="名字"
+            required
+            minlength="3"
+            maxlength="100"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">电话</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="123-456-789"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">邮箱</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@address.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="website">网址</label>
+          <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://imissu.ke.qq.com/"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password1">密码</label>
+          <input
+            type="password"
+            id="password1"
+            placeholder="密码"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            title="字母, 数字, 特殊符号组成."
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">确认密码</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="确认密码"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            name="password"
+          />
+        </div>
+        <button type="submit">注册</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

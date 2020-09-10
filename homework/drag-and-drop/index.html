@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拖拽</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-title">拖拽任务</h1>
+    <div class="drag-container">
+      <ul class="drag-list">
+        <li class="drag-column backlog-column">
+          <span class="header">
+            <h1>米修在线</h1>
+          </span>
+          <div id="backlog-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="backlog-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(0)"
+            ></ul>
+          </div>
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(0)">
+              <span class="plus-sign">+</span>
+              <span>添加课程</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(0)">
+              <span>保存课程</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+        <li class="drag-column progress-column">
+          <span class="header">
+            <h1>开发中</h1>
+          </span>
+          <div id="progress-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="progress-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(1)"
+            ></ul>
+          </div>
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(1)">
+              <span class="plus-sign">+</span>
+              <span>添加任务</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(1)">
+              <span>保存任务</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+        <li class="drag-column complete-column">
+          <span class="header">
+            <h1>完成</h1>
+          </span>
+          <div id="complete-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="complete-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(2)"
+            ></ul>
+          </div>
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(2)">
+              <span class="plus-sign">+</span>
+              <span>添加任务</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(2)">
+              <span>保存任务</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+        <li class="drag-column on-hold-column">
+          <span class="header">
+            <h1>暂缓</h1>
+          </span>
+          <!-- On Hold Content -->
+          <div id="on-hold-content" class="custom-scroll">
+            <ul
+              class="drag-item-list"
+              id="on-hold-list"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              ondragenter="dragEnter(3)"
+            ></ul>
+          </div>
+          <div class="add-btn-group">
+            <div class="add-btn" onclick="showInputBox(3)">
+              <span class="plus-sign">+</span>
+              <span>添加任务</span>
+            </div>
+            <div class="add-btn solid" onclick="hideInputBox(3)">
+              <span>完成任务</span>
+            </div>
+          </div>
+          <div class="add-container">
+            <div class="add-item" contenteditable="true"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
